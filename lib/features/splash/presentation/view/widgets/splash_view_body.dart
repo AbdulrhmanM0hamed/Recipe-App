@@ -18,7 +18,7 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
 Timer? _timer;
 
  _setTimer() {
-    _timer = Timer(const Duration(seconds: constantManger.durationSplash ), _goNext);
+    _timer = Timer(const Duration(seconds: ConstantsManger.durationSplash ), _goNext);
    }
 
   _goNext() {
@@ -54,7 +54,7 @@ Timer? _timer;
   }
 
     void animationFunction() {
-    animationController = AnimationController(vsync: this , duration: const Duration(seconds: constantManger.durationAnimation) );
+    animationController = AnimationController(vsync: this , duration: const Duration(seconds: ConstantsManger.durationAnimation) );
     slidingAnimation = Tween <Offset>(begin: const Offset(0, 2), end: const Offset(0, 0) ).animate(animationController);
     animationController.forward();
     
