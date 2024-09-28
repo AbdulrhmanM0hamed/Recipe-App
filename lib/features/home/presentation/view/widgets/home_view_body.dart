@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:recipe_app/core/util/resources/assets_manger.dart';
 import 'package:recipe_app/core/util/resources/color_manger.dart';
 import 'package:recipe_app/core/util/resources/font_manger.dart';
 import 'package:recipe_app/core/util/resources/styles_manger.dart';
 import 'package:recipe_app/core/util/resources/values_manger.dart';
 import 'package:recipe_app/features/home/presentation/view/models/categories_model.dart';
 import 'package:recipe_app/features/home/presentation/view/widgets/custom_category.dart';
-import 'package:recipe_app/features/home/presentation/view/widgets/custom_categoy_list_view.dart';
+import 'package:recipe_app/features/home/presentation/view/widgets/cutom_category_list_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -83,7 +84,7 @@ class HomeViewBody extends StatelessWidget {
           const SizedBox(
             height: AppSize.s12,
           ),
-       const SizedBox(
+        const  SizedBox(
             height: 80 ,
             child: CustomCategoryListView(),
           )
@@ -92,6 +93,7 @@ class HomeViewBody extends StatelessWidget {
     ));
   }
 }
+
 
 
 
