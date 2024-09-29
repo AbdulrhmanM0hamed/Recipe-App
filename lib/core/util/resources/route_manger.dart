@@ -1,5 +1,6 @@
 
 import 'package:go_router/go_router.dart';
+import 'package:recipe_app/features/details/presentation/view/detials_view.dart';
 import 'package:recipe_app/features/home/presentation/view/home_view.dart';
 import 'package:recipe_app/features/home/presentation/view/widgets/bottom_nav_bar.dart';
 import 'package:recipe_app/features/splash/presentation/view/splash_view.dart';
@@ -27,6 +28,10 @@ abstract class RouteManger {
       GoRoute(
         path: bottomNavBar,
         builder: (context, state) =>  CustomBottomNavBar(),
+      ),
+       GoRoute(
+        path: detials,
+        builder: (context, state) => const DetialsView(),
       ),
      
     ],

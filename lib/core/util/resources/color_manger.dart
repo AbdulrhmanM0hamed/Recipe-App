@@ -4,7 +4,7 @@ class ColorManger {
   static Color primary = Colors.white;
   static Color darkGrey = const Color(0xff525252);
   static Color green = const Color(0xff0c9a61);
-  static Color lightGrey = const Color(0xff9E9E9E);
+  static Color lightGrey = const Color.fromARGB(255, 150, 149, 149);
 
   
   static Color darkprimary = const Color(0xffd17d11);

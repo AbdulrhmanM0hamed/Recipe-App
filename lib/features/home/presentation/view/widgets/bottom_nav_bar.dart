@@ -14,7 +14,7 @@ class CustomBottomNavBar extends StatefulWidget {
 
 class _MyAppState extends State<CustomBottomNavBar> {
   int _page = 0;
-  GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
+ final GlobalKey<CurvedNavigationBarState>  _bottomNavigationKey = GlobalKey();
 
   // إضافة صفحات (شاشات) لعرضها بناءً على الـ index
   final List<Widget> _pages = const[

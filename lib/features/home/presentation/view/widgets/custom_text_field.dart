@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:recipe_app/core/util/resources/assets_manger.dart';
+import 'package:recipe_app/core/util/resources/string_manger.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
@@ -11,10 +13,11 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-          hintText: "Search any recipes",
+        
+          hintText: AppString.search ,
           prefixIcon: const Icon(FontAwesomeIcons.magnifyingGlass),
           suffixIcon: SvgPicture.asset(
-            "assets/images/filter.svg",
+            AssetsManger.filter,
             fit: BoxFit.none,
           ),
           border: OutlineInputBorder(

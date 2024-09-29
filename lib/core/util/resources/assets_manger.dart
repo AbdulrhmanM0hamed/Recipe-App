@@ -6,5 +6,9 @@ class AssetsManger {
   static const String lunch = "$imagePath/lunch.svg";
   static const String dinner = "$imagePath/dinner.svg";
   static const String dessert = "$imagePath/dessert.svg";
+ static const String ferakh = "$imagePath/frakh.svg";
+  static const String filter = "$imagePath/filter.svg";
+
+
 
 }
