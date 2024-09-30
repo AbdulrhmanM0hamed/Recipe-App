@@ -8,6 +8,8 @@ class AppString {
  static const lunch  = "Lunch";
  static const dinner  = "Dinner";
  static const dessert  = "Dessert";
+ static const snacks  = "Snacks";
+ static const drinks  = "Drinks";
  static const search   = "Search any recipes";
  static const recipeoftheweek   = "Recipe of the Week";
 
