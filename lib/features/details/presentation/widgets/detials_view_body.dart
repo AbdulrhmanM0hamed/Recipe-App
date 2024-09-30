@@ -71,8 +71,8 @@ class DetialsViewBody extends StatelessWidget {
                   ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+           const   Padding(
+                padding:  EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

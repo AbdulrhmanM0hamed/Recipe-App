@@ -21,9 +21,9 @@ class RecipeOfTheWeek extends StatelessWidget {
               color: ColorManger.black,
               fontSize: FontSize.size24),
         ),
-        SizedBox(height: screenHeight * 0.02), // تباعد بنسبة 2%
+        SizedBox(height: screenHeight * 0.02), 
         SizedBox(
-          height: screenHeight * 0.3, // 30% من ارتفاع الشاشة
+          height: screenHeight * 0.3, 
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: 5,
@@ -102,8 +102,8 @@ class RecipeCard extends StatelessWidget {
               children: [
                 Icon(Icons.timer, color: ColorManger.green),
                const Text("30 min"),
-             const   Icon(Icons.star, color: Colors.orange),
-              const  Text("4.5"),
+               const   Icon(Icons.star, color: Colors.orange),
+               const  Text("4.5"),
               ],
             ),
           ),
