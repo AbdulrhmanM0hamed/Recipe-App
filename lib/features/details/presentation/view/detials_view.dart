@@ -13,6 +13,8 @@ class DetialsView extends StatelessWidget {
       body: Stack(
         children: [
           const DetialsViewBody(),
+            
+
           Positioned(
             bottom: 20,
             left: 0,
@@ -21,11 +23,11 @@ class DetialsView extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 100),
               child: ElevatedButton.icon(
                 onPressed: () {
-                  // هنا يمكنك إضافة الكود الذي يفتح رابط الفيديو على يوتيوب
+                  
                 },
                 icon:  Icon(
                   Icons.play_arrow_sharp,
-                  color: ColorManger.white,
+                  color: ColorManger.black,
                   size: 30,
                 ),
                 label: Text(

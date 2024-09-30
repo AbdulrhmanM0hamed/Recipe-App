@@ -12,17 +12,14 @@ class CustomCategoryListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-     
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: categories.length,
-        itemBuilder: (context, index) => Padding(
-    
-          padding: const EdgeInsets.symmetric(horizontal: AppMargin.m5),
-          child: CustomCategory(
-            category: categories[index],
-          ),
+    return ListView.builder(
+      scrollDirection: Axis.horizontal,
+      itemCount: categories.length,
+      itemBuilder: (context, index) => Padding(
+        
+        padding: const EdgeInsets.symmetric(horizontal: AppMargin.m5),
+        child: CustomCategory(
+          category: categories[index],
         ),
       ),
     );
