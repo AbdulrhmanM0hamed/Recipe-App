@@ -27,7 +27,7 @@ class DetialsView extends StatelessWidget {
                 },
                 icon:  Icon(
                   Icons.play_arrow_sharp,
-                  color: ColorManger.black,
+                  color: ColorManger.white,
                   size: 30,
                 ),
                 label: Text(

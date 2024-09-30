@@ -46,9 +46,9 @@ class DetialsViewBody extends StatelessWidget {
                         icon: const Icon(Icons.arrow_back, color: Colors.black),
                         onPressed: () {
                           if (Navigator.canPop(context)) {
-                            Navigator.pop(context);
+                           
                           } else {
-                            context.go(RouteManger.homeview);
+                            context.go(RouteManger.bottomNavBar);
                           }
                         },
                       ),
