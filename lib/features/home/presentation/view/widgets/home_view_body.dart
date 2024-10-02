@@ -68,7 +68,13 @@ class HomeViewBody extends StatelessWidget {
               ),
               SizedBox(height: screenHeight * 0.02), 
 
-              const RecipeOfTheWeek(),
+              GestureDetector(
+                onTap: () {
+                  context.go(RouteManger.detials);
+                      
+                } 
+              
+               , child: const RecipeOfTheWeek()),
             ],
           ),
         ),

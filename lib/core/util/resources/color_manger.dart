@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class ColorManger {
   static Color primary = Colors.white;
   static Color darkGrey = const Color(0xff525252);
-  static Color green = const Color(0xff0c9a61);
+  static Color green =   Colors.teal;
+static Color greenlight = const Color.fromARGB(255, 185, 233, 214);
+
   static Color lightGrey = const Color.fromARGB(255, 150, 149, 149);
 
   

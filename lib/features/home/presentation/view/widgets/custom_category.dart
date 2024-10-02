@@ -23,7 +23,7 @@ class CustomCategory extends StatelessWidget {
             height: 2,
           ),
           SvgPicture.asset(
-            category.image,
+            category.imagePath,
             fit: BoxFit.contain,
             width: 55,
             height: 55,

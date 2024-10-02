@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:recipe_app/core/util/resources/route_manger.dart';
 
-class CustomHeadDetialsView extends StatelessWidget {
-  const CustomHeadDetialsView({
+class CustomHeadDetails extends StatelessWidget {
+  const CustomHeadDetails({
     super.key,
+    required this.prevRoute,
   });
+
+  final String prevRoute;
 
   @override
   Widget build(BuildContext context) {
@@ -32,10 +34,13 @@ class CustomHeadDetialsView extends StatelessWidget {
             child: IconButton(
               icon: const Icon(Icons.arrow_back, color: Colors.black),
               onPressed: () {
+                // GoRouter.of(context).go(prevRoute);
+    
                 if (Navigator.canPop(context)) {
-                 
+                  Navigator.pop(context);
                 } else {
-                  context.go(RouteManger.bottomNavBar);
+                  GoRouter.of(context).go(prevRoute);
+                 
                 }
               },
             ),

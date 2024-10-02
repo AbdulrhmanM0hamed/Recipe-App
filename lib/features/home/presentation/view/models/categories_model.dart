@@ -1,10 +1,11 @@
 class Category {
+  final String title;
+  final String imagePath; // path for the SVG image or any other relevant properties
+  final int mealCount; // number of meals in the category
 
-  final String image ;
-  final String title ;
-
- Category({required this.image, required this.title}); 
-
-
-  
+  Category({
+    required this.title,
+    required this.imagePath,
+    required this.mealCount,
+  });
 }

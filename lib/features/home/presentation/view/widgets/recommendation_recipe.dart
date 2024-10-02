@@ -10,7 +10,6 @@ class RecommendationRecipe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // الحصول على عرض وارتفاع الشاشة
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
 
