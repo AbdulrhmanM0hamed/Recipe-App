@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:go_router/go_router.dart';
 import 'package:recipe_app/core/util/resources/assets_manger.dart';
 import 'package:recipe_app/core/util/resources/color_manger.dart';
 import 'package:recipe_app/core/util/resources/route_manger.dart';
+import 'package:recipe_app/features/details/presentation/view/detials_view.dart';
 import 'package:recipe_app/features/home/presentation/view/models/categories_model.dart';
 
 class CustomGridView extends StatelessWidget {
@@ -31,7 +31,13 @@ class CustomGridView extends StatelessWidget {
       childrenDelegate: SliverChildBuilderDelegate(
         childCount: 10,
         (context, index) => GestureDetector(
-          onTap: () {context.push(RouteManger.detials, extra: RouteManger.categoryDetails);
+          onTap: () {Navigator.push(
+  context,
+  MaterialPageRoute(
+    builder: (context) => DetialsView(),
+  ),
+);
+
 },
           child: Container(
             margin: const EdgeInsets.all(5),

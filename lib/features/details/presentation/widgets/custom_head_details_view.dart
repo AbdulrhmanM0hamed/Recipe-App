@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:go_router/go_router.dart';
 
 class CustomHeadDetails extends StatelessWidget {
   const CustomHeadDetails({
     super.key,
-    required this.prevRoute,
+  
   });
 
-  final String prevRoute;
 
   @override
   Widget build(BuildContext context) {
@@ -36,12 +34,11 @@ class CustomHeadDetails extends StatelessWidget {
               onPressed: () {
                 // GoRouter.of(context).go(prevRoute);
     
-                if (Navigator.canPop(context)) {
+             
                   Navigator.pop(context);
-                } else {
-                  GoRouter.of(context).go(prevRoute);
+      
                  
-                }
+            
               },
             ),
           ),

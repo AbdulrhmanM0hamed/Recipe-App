@@ -8,8 +8,8 @@ import 'package:recipe_app/features/details/presentation/widgets/recipe_name_wit
 import 'package:recipe_app/features/details/presentation/widgets/subtile_details_view.dart';
 
 class DetialsViewBody extends StatelessWidget {
-  const DetialsViewBody({super.key, required this.prevRoute});
-  final String prevRoute;
+  const DetialsViewBody({super.key, });
+
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class DetialsViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomHeadDetails(prevRoute: prevRoute),
+          CustomHeadDetails(),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: AppPadding.p20),
             child: Column(

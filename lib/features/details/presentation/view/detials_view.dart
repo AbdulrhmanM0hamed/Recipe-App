@@ -15,7 +15,6 @@ class DetialsView extends StatelessWidget {
       body: Stack(
         children: [
           DetialsViewBody(
-            prevRoute: RouteManger.bottomNavBar,
           ),
           WatchVideoYoutupe(),
         ],

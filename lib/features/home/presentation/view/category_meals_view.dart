@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:recipe_app/core/util/resources/color_manger.dart';
 import 'package:recipe_app/core/util/resources/font_manger.dart';
 import 'package:recipe_app/core/util/resources/styles_manger.dart';
@@ -17,12 +16,12 @@ class CategoryMealscreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(onPressed: (){
- if (Navigator.canPop(context)) {
+
                   Navigator.pop(context);
-                } else {
-                  GoRouter.of(context).go(prevRoute);
-                 
-                }      
+             
+               
+          
+                     
                   }, icon: Icon(Icons.arrow_back)),
         title: Text(
           category.title, 

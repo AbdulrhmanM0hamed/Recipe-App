@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:recipe_app/core/util/resources/route_manger.dart';
 import 'package:recipe_app/core/util/resources/string_manger.dart';
+import 'package:recipe_app/features/details/presentation/view/detials_view.dart';
 import 'package:recipe_app/features/home/presentation/view/widgets/custom_app_bar.dart';
 import 'package:recipe_app/features/home/presentation/view/widgets/custom_outline.dart';
 import 'package:recipe_app/features/home/presentation/view/widgets/custom_text_field.dart';
@@ -59,7 +59,12 @@ class HomeViewBody extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.02), 
                     child: GestureDetector(
                       onTap: () {
-                        context.go(RouteManger.detials);
+                       Navigator.push(
+  context,
+  MaterialPageRoute(
+    builder: (context) => DetialsView(),
+  ),
+);
                       },
                       child: const RecommendationRecipe(),
                     ),
@@ -70,7 +75,12 @@ class HomeViewBody extends StatelessWidget {
 
               GestureDetector(
                 onTap: () {
-                  context.go(RouteManger.detials);
+                 Navigator.push(
+  context,
+  MaterialPageRoute(
+    builder: (context) => DetialsView(),
+  ),
+);
                       
                 } 
               

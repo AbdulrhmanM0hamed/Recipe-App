@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:recipe_app/core/util/resources/color_manger.dart';
 import 'package:recipe_app/core/util/resources/route_manger.dart';
+import 'package:recipe_app/features/home/presentation/view/category_meals_view.dart';
 import 'package:recipe_app/features/home/presentation/view/models/categories_model.dart';
 
 class CategoriesViewBody extends StatelessWidget {
@@ -40,7 +41,12 @@ final categories = [
         final category = categories[index];
         return GestureDetector(
           onTap: () {
-context.go(RouteManger.categoryMeals, extra: category);        },
+Navigator.push(
+  context,
+  MaterialPageRoute(
+    builder: (context) => CategoryMealscreen(category: category),
+  ),
+);     },
           child: Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(

@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:recipe_app/core/util/resources/constants_manger.dart';
 import 'package:recipe_app/core/util/resources/route_manger.dart';
+import 'package:recipe_app/features/home/presentation/view/widgets/bottom_nav_bar.dart';
 import 'package:recipe_app/features/splash/presentation/view/widgets/sliding_logo.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -22,7 +22,12 @@ Timer? _timer;
    }
 
   _goNext() {
-     context.go(RouteManger.bottomNavBar);
+    Navigator.push(
+  context,
+  MaterialPageRoute(
+    builder: (context) => CustomBottomNavBar(),
+  ),
+);
   }
 
   @override
