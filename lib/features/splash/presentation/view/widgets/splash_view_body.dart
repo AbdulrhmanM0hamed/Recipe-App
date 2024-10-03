@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:recipe_app/core/util/resources/constants_manger.dart';
+import 'package:recipe_app/features/categories/presentation/view_model/cubit/categories_cubit.dart';
 import 'package:recipe_app/features/home/presentation/view/widgets/bottom_nav_bar.dart';
 import 'package:recipe_app/features/home/presentation/view_model/cubit/random_recipe_cubit.dart';
 import 'package:recipe_app/features/splash/presentation/view/widgets/sliding_logo.dart';
@@ -40,6 +41,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
     _setTimer();
     animationFunction();
     BlocProvider.of<RandomRecipeCubit>(context).fetchRandomRecipe();
+     BlocProvider.of<CategoriesCubit>(context).fetchCategories();
+
   }
 
   @override

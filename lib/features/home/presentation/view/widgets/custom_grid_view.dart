@@ -9,7 +9,7 @@ import 'package:recipe_app/features/home/presentation/view/models/categories_mod
 class CustomGridView extends StatelessWidget {
   const CustomGridView({super.key, required this.category});
 
-  final Category category;
+  final CategoryCart category;
 
   @override
   Widget build(BuildContext context) {

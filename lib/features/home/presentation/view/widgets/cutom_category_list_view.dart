@@ -40,19 +40,19 @@ class CustomCategoryListView extends StatelessWidget {
   }
 }
 
-List<Category> categories = [
-  Category(
+List<CategoryCart> categories = [
+  CategoryCart(
       imagePath: AssetsManger.breakfast,
       title: AppString.breakfast,
       mealCount: 10),
-  Category(
+  CategoryCart(
       imagePath: AssetsManger.lunch, title: AppString.lunch, mealCount: 10),
-  Category(
+  CategoryCart(
       imagePath: AssetsManger.dinner, title: AppString.dinner, mealCount: 10),
-  Category(
+  CategoryCart(
       imagePath: AssetsManger.dessert, title: AppString.dessert, mealCount: 10),
-  Category(
+  CategoryCart(
       imagePath: AssetsManger.snacks, title: AppString.snacks, mealCount: 10),
-  Category(
+  CategoryCart(
       imagePath: AssetsManger.drinks, title: AppString.drinks, mealCount: 10),
 ];

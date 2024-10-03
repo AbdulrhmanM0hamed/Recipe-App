@@ -7,7 +7,7 @@ import 'package:recipe_app/features/home/presentation/view/models/categories_mod
 import 'package:recipe_app/features/home/presentation/view/widgets/custom_grid_view.dart';
 
 class CategoryMealscreen extends StatelessWidget {
-  final Category category; // Using category only
+  final CategoryCart category; // Using category only
 
   const CategoryMealscreen(
       {super.key, required this.category}); // Removed unnecessary parameter

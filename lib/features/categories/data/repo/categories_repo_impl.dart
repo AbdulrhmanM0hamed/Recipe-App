@@ -2,25 +2,24 @@ import 'package:dio/dio.dart';
 import 'package:dartz/dartz.dart';
 import 'package:recipe_app/core/errors/failuer.dart';
 import 'package:recipe_app/core/util/api_service.dart';
+import 'package:recipe_app/features/categories/data/model/category.dart';
 import 'package:recipe_app/features/categories/data/repo/categories_repo.dart';
-import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
 
 class CategoriesRepoImpl implements CategoriesRepo {
   final ApiService apiService;
 
-  CategoriesRepoImpl({required this.apiService});
+  CategoriesRepoImpl(this.apiService);
 
   
 
   @override
-  Future<Either<Failuer, List<Meal>>> fetchCategories() async {
+  Future<Either<Failuer, List<Category>>> fetchCategories() async {
     try {
       final data = await apiService.get(endpoint: 'categories.php');
-      if (data['meals'] != null) {
-        List<Meal> meals =
-            (data['meals'] as List).map((item) => Meal.fromJson(item)).toList();
+      if (data['categories'] != null) {
+        List<Category> categories =(data['categories'] as List).map((item) => Category.fromJson(item)).toList();
 
-        return Right(meals);
+        return Right(categories);
       } else {
         return Left(ServerFailure(errMessage: "No meals found"));
       }

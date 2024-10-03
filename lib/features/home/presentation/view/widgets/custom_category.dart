@@ -6,7 +6,7 @@ import 'package:recipe_app/core/util/resources/styles_manger.dart';
 import 'package:recipe_app/features/home/presentation/view/models/categories_model.dart';
 
 class CustomCategory extends StatelessWidget {
-  final Category category;
+  final CategoryCart category;
 
   const CustomCategory({super.key, required this.category});
 
