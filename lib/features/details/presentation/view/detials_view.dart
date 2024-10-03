@@ -7,14 +7,17 @@ class DetialsView extends StatelessWidget {
   const DetialsView({super.key, required this.meal});
   final Meal meal;
 
-
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: Stack(
         children: [
-          DetailsViewBody(meal: meal,),
-          WatchVideoYoutupe(meal: meal,),
+          DetailsViewBody(
+            meal: meal,
+          ),
+          WatchVideoYoutupe(
+            meal: meal,
+          ),
         ],
       ),
     );

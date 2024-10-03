@@ -8,25 +8,17 @@ sealed class RandomRecipeState extends Equatable {
 }
 
 final class RandomRecipeInitial extends RandomRecipeState {}
+
 final class RandomRecipeLoading extends RandomRecipeState {}
+
 final class RandomRecipeSuccess extends RandomRecipeState {
+  final List<Meal> meals;
 
- final List<Meal> meals ;
-
-const  RandomRecipeSuccess({required this.meals}); 
-
-
+  const RandomRecipeSuccess({required this.meals});
 }
+
 final class RandomRecipeFailure extends RandomRecipeState {
+  final String errMessage;
 
-  final String errMessage ;
-
- const RandomRecipeFailure({required this.errMessage}); 
-
-
-
-
+  const RandomRecipeFailure({required this.errMessage});
 }
-
-
-

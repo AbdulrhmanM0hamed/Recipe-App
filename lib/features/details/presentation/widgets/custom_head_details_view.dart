@@ -3,13 +3,9 @@ import 'package:flutter_svg/svg.dart';
 import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
 
 class CustomHeadDetails extends StatelessWidget {
-  const CustomHeadDetails({
-    super.key,
-    required this.meal
-  });
+  const CustomHeadDetails({super.key, required this.meal});
 
-     final Meal meal ; 
-
+  final Meal meal;
 
   @override
   Widget build(BuildContext context) {

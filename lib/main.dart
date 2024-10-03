@@ -8,7 +8,7 @@ import 'package:recipe_app/features/home/presentation/view_model/cubit/random_re
 import 'package:recipe_app/features/splash/presentation/view/splash_view.dart';
 
 void main() async {
-  setupServiceLocater() ; 
+  setupServiceLocater();
   runApp(const RecipeApp());
 }
 
@@ -19,10 +19,8 @@ class RecipeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-         BlocProvider(
-          create: (context) => RandomRecipeCubit( getIt.get<HomeRepoImpl>())
-        ), 
-
+        BlocProvider(
+            create: (context) => RandomRecipeCubit(getIt.get<HomeRepoImpl>())),
       ],
       child: MaterialApp(
           home: const SplashView(),

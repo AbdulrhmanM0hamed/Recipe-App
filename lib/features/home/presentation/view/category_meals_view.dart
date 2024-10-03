@@ -34,9 +34,7 @@ class CategoryMealscreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(AppPadding.p8),
-        child: CustomGridView(
-            category: category
-            ),
+        child: CustomGridView(category: category),
       ),
     );
   }

@@ -9,7 +9,7 @@ class CategoriesViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-final categories = [
+    final categories = [
       Category(
           title: 'Meat',
           imagePath: "assets/images/categories/Meat.svg",
@@ -58,11 +58,7 @@ final categories = [
           title: 'Seafood',
           imagePath: "assets/images/categories/Seafood.svg",
           mealCount: 14),
-];
-      
-  
-
-
+    ];
 
     return GridView.builder(
       padding: const EdgeInsets.all(20),
@@ -76,24 +72,24 @@ final categories = [
         final category = categories[index];
         return GestureDetector(
           onTap: () {
-Navigator.push(
-  context,
-  MaterialPageRoute(
-    builder: (context) => CategoryMealscreen(category: category),
-  ),
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => CategoryMealscreen(category: category),
+              ),
             );
           },
           child: Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-               color: ColorManger.greenlight,
+                color: ColorManger.greenlight,
                 borderRadius: BorderRadius.circular(8)),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SvgPicture.asset(
                   category.imagePath,
-               height: 50,
+                  height: 50,
                 ),
                 const SizedBox(height: 8),
                 Text(

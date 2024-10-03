@@ -50,8 +50,7 @@ class HomeViewBody extends StatelessWidget {
                 child: RecommendationRecipe(),
               ),
               SizedBox(height: screenHeight * 0.02),
-           
-                const RecipeOfTheWeek(),
+              const RecipeOfTheWeek(),
             ],
           ),
         ),
@@ -59,4 +58,3 @@ class HomeViewBody extends StatelessWidget {
     );
   }
 }
-

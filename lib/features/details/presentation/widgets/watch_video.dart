@@ -6,14 +6,11 @@ import 'package:recipe_app/features/home/data/model_data/random_recipe_model/mea
 import 'package:url_launcher/url_launcher.dart';
 
 class WatchVideoYoutupe extends StatelessWidget {
-   WatchVideoYoutupe({
-    super.key, required this.meal
-  });
+  WatchVideoYoutupe({super.key, required this.meal});
 
- final Meal meal ; 
+  final Meal meal;
 
   @override
-
   Widget build(BuildContext context) {
     return Positioned(
       bottom: 20,
@@ -31,7 +28,7 @@ class WatchVideoYoutupe extends StatelessWidget {
             size: 30,
           ),
           label: Text(
-            "Watvh Video" ,
+            "Watvh Video",
             style: getRegularStyle(
               color: ColorManger.white,
               fontFamily: FontConstant.montserrat,
@@ -51,18 +48,16 @@ class WatchVideoYoutupe extends StatelessWidget {
   }
 }
 
-
 Future<void> launchCustomUr(BuildContext context, String? url) async {
   if (url != null && url.isNotEmpty) {
     Uri uri = Uri.parse(url);
     if (await canLaunchUrl(uri)) {
-      await launchUrl(uri, mode: LaunchMode.externalApplication); 
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
     } else {
       customSnackBar(context, 'Cannot launch $url');
     }
   }
 }
-
 
 void customSnackBar(context, String text) {
   ScaffoldMessenger.of(context).showSnackBar(

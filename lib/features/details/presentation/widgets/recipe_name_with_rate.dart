@@ -6,18 +6,18 @@ import 'package:recipe_app/features/home/data/model_data/random_recipe_model/mea
 
 class RecipeNameWithRate extends StatelessWidget {
   const RecipeNameWithRate({
-    super.key, required this.meal,
-    
+    super.key,
+    required this.meal,
   });
-final Meal meal ; 
+  final Meal meal;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Expanded(
           child: Text(
-            maxLines: 6,
-            meal.strMeal ?? "not found",
+              maxLines: 6,
+              meal.strMeal ?? "not found",
               style: getBoldStyle(
                 color: ColorManger.black,
                 fontFamily: FontConstant.montserrat,

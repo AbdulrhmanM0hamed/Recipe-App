@@ -15,34 +15,31 @@ class SplashViewBody extends StatefulWidget {
 
 class _SplashViewBodyState extends State<SplashViewBody>
     with SingleTickerProviderStateMixin {
-  late AnimationController animationController; 
+  late AnimationController animationController;
   late Animation<Offset> slidingAnimation;
 
-Timer? _timer;
+  Timer? _timer;
 
- _setTimer() {
+  _setTimer() {
     _timer =
         Timer(const Duration(seconds: ConstantsManger.durationSplash), _goNext);
-   }
+  }
 
   _goNext() {
     Navigator.push(
-  context,
-  MaterialPageRoute(
-    builder: (context) => CustomBottomNavBar(),
-  ),
-);
+      context,
+      MaterialPageRoute(
+        builder: (context) => CustomBottomNavBar(),
+      ),
+    );
   }
 
   @override
-
-
   void initState() {
     super.initState();
     _setTimer();
     animationFunction();
-     BlocProvider.of<RandomRecipeCubit>(context).fetchRandomRecipe();
- 
+    BlocProvider.of<RandomRecipeCubit>(context).fetchRandomRecipe();
   }
 
   @override
@@ -55,16 +52,16 @@ Timer? _timer;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-           SlidingLogo(slidingAnimation: slidingAnimation),
-        ],
+        body: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        SlidingLogo(slidingAnimation: slidingAnimation),
+      ],
     ));
   }
 
-    void animationFunction() {
+  void animationFunction() {
     animationController = AnimationController(
         vsync: this,
         duration: const Duration(seconds: ConstantsManger.durationAnimation));
@@ -72,6 +69,5 @@ Timer? _timer;
         Tween<Offset>(begin: const Offset(0, 2), end: const Offset(0, 0))
             .animate(animationController);
     animationController.forward();
-    
   }
 }

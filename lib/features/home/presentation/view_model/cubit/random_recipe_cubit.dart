@@ -28,7 +28,8 @@ class RandomRecipeCubit extends Cubit<RandomRecipeState> {
             return; // الخروج من الحلقة عند وجود خطأ
           },
           (fetchedMeals) {
-            meals.addAll(fetchedMeals); // إضافة كل الوجبات من القائمة إلى قائمة الوجبات
+            meals.addAll(
+                fetchedMeals); // إضافة كل الوجبات من القائمة إلى قائمة الوجبات
           },
         );
       }

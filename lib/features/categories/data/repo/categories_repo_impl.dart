@@ -2,18 +2,20 @@ import 'package:dio/dio.dart';
 import 'package:dartz/dartz.dart';
 import 'package:recipe_app/core/errors/failuer.dart';
 import 'package:recipe_app/core/util/api_service.dart';
+import 'package:recipe_app/features/categories/data/repo/categories_repo.dart';
 import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
-import 'package:recipe_app/features/home/data/model_data/random_recipe_model/repo/home_repo.dart';
 
-class HomeRepoImpl implements HomeRepo {
+class CategoriesRepoImpl implements CategoriesRepo {
   final ApiService apiService;
 
-  HomeRepoImpl(this.apiService);
+  CategoriesRepoImpl({required this.apiService});
+
+  
 
   @override
-  Future<Either<Failuer, List<Meal>>> fetchRandomRecipe() async {
+  Future<Either<Failuer, List<Meal>>> fetchCategories() async {
     try {
-      final data = await apiService.get(endpoint: 'random.php');
+      final data = await apiService.get(endpoint: 'categories.php');
       if (data['meals'] != null) {
         List<Meal> meals =
             (data['meals'] as List).map((item) => Meal.fromJson(item)).toList();
@@ -29,5 +31,6 @@ class HomeRepoImpl implements HomeRepo {
       return Left(ServerFailure(errMessage: "Unexpected Error"));
     }
   }
-}
+  
 
+}

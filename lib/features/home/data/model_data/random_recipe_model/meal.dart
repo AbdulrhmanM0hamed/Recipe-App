@@ -21,12 +21,12 @@ class Meal extends Equatable {
     this.idMeal,
     this.strMeal,
     this.strDrinkAlternate,
-   required this.strCategory,
+    required this.strCategory,
     this.strArea,
     required this.strInstructions,
     required this.strMealThumb,
     this.strTags,
-   required this.strYoutube,
+    required this.strYoutube,
     required this.ingredients,
     required this.measures,
     this.strSource,
@@ -38,7 +38,7 @@ class Meal extends Equatable {
   factory Meal.fromJson(Map<String, dynamic> json) {
     List<String?> ingredients = [];
     List<String?> measures = [];
-    
+
     for (int i = 1; i <= 20; i++) {
       ingredients.add(json['strIngredient$i'] as String?);
       measures.add(json['strMeasure$i'] as String?);
@@ -58,7 +58,8 @@ class Meal extends Equatable {
       measures: measures,
       strSource: json['strSource'] as String?,
       strImageSource: json['strImageSource'] as dynamic,
-      strCreativeCommonsConfirmed: json['strCreativeCommonsConfirmed'] as dynamic,
+      strCreativeCommonsConfirmed:
+          json['strCreativeCommonsConfirmed'] as dynamic,
       dateModified: json['dateModified'] as dynamic,
     );
   }
@@ -79,7 +80,7 @@ class Meal extends Equatable {
       data['strIngredient${i + 1}'] = ingredients[i];
       data['strMeasure${i + 1}'] = measures[i];
     }
-    
+
     data['strSource'] = strSource;
     data['strImageSource'] = strImageSource;
     data['strCreativeCommonsConfirmed'] = strCreativeCommonsConfirmed;
@@ -90,20 +91,20 @@ class Meal extends Equatable {
 
   @override
   List<Object?> get props => [
-    idMeal,
-    strMeal,
-    strDrinkAlternate,
-    strCategory,
-    strArea,
-    strInstructions,
-    strMealThumb,
-    strTags,
-    strYoutube,
-    ingredients,
-    measures,
-    strSource,
-    strImageSource,
-    strCreativeCommonsConfirmed,
-    dateModified,
-  ];
+        idMeal,
+        strMeal,
+        strDrinkAlternate,
+        strCategory,
+        strArea,
+        strInstructions,
+        strMealThumb,
+        strTags,
+        strYoutube,
+        ingredients,
+        measures,
+        strSource,
+        strImageSource,
+        strCreativeCommonsConfirmed,
+        dateModified,
+      ];
 }
