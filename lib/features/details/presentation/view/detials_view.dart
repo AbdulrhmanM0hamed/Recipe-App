@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_app/core/util/resources/route_manger.dart';
 import 'package:recipe_app/features/details/presentation/widgets/detials_view_body.dart';
 import 'package:recipe_app/features/details/presentation/widgets/watch_video.dart';
+import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
 
 class DetialsView extends StatelessWidget {
-  const DetialsView({super.key, this.route});
+  const DetialsView({super.key, required this.meal});
+  final Meal meal;
 
-  final String? route;
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      
+    return  Scaffold(
       body: Stack(
         children: [
-          DetialsViewBody(
-          ),
-          WatchVideoYoutupe(),
+          DetailsViewBody(meal: meal,),
+          WatchVideoYoutupe(meal: meal,),
         ],
       ),
     );

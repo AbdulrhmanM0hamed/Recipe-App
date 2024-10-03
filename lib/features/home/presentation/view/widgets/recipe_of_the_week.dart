@@ -21,15 +21,15 @@ class RecipeOfTheWeek extends StatelessWidget {
               color: ColorManger.black,
               fontSize: FontSize.size24),
         ),
-        SizedBox(height: screenHeight * 0.02), 
+        SizedBox(height: screenHeight * 0.02),
         SizedBox(
-          height: screenHeight * 0.3, 
+          height: screenHeight * 0.3,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: 5,
             itemBuilder: (context, index) => const Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 8.0),
-              child:  RecipeCard(),
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              child: RecipeCard(),
             ),
           ),
         ),
@@ -45,7 +45,7 @@ class RecipeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
-    
+
     return Container(
       width: screenWidth * 0.4, // عرض الكارد 40% من عرض الشاشة
       decoration: BoxDecoration(
@@ -101,9 +101,9 @@ class RecipeCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Icon(Icons.timer, color: ColorManger.green),
-               const Text("30 min"),
-               const   Icon(Icons.star, color: Colors.orange),
-               const  Text("4.5"),
+                const Text("30 min"),
+                const Icon(Icons.star, color: Colors.orange),
+                const Text("4.5"),
               ],
             ),
           ),

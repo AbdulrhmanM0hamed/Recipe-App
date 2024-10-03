@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:recipe_app/core/util/resources/color_manger.dart';
 import 'package:recipe_app/core/util/resources/font_manger.dart';
@@ -8,7 +6,6 @@ import 'package:recipe_app/core/util/resources/values_manger.dart';
 
 ThemeData getApplicationTheme() {
   return ThemeData(
-    
     scaffoldBackgroundColor: ColorManger.primary,
     primaryColor: ColorManger.primary,
     primaryColorLight: ColorManger.lightprimary,
@@ -16,7 +13,6 @@ ThemeData getApplicationTheme() {
     disabledColor: ColorManger.grey1,
     splashColor: ColorManger.lightprimary,
     fontFamily: 'GT Sectra Fine',
-    
 
     cardTheme: CardTheme(
       color: ColorManger.white,
@@ -30,7 +26,9 @@ ThemeData getApplicationTheme() {
         elevation: AppSize.s4,
         shadowColor: ColorManger.lightprimary,
         titleTextStyle: getRegularStyle(
-            fontSize: FontSize.size16, color: ColorManger.white , fontFamily: 'Montserrat')),
+            fontSize: FontSize.size16,
+            color: ColorManger.white,
+            fontFamily: 'Montserrat')),
 
     //button theme
 
@@ -48,12 +46,10 @@ ThemeData getApplicationTheme() {
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppSize.s16)),
       backgroundColor: ColorManger.primary,
-      textStyle:
-          getRegularStyle(color: ColorManger.white, fontSize: FontSize.size17 , fontFamily: 'Montserrat'),
+      textStyle: getRegularStyle(
+          color: ColorManger.white,
+          fontSize: FontSize.size17,
+          fontFamily: 'Montserrat'),
     )),
-
-   
-
-   
   );
 }

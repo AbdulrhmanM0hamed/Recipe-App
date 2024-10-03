@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_app/core/util/resources/route_manger.dart';
 import 'package:recipe_app/core/util/resources/string_manger.dart';
 import 'package:recipe_app/features/details/presentation/view/detials_view.dart';
 import 'package:recipe_app/features/home/presentation/view/widgets/custom_app_bar.dart';
@@ -21,70 +20,38 @@ class HomeViewBody extends StatelessWidget {
       child: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: screenWidth * 0.05, 
+            horizontal: screenWidth * 0.05,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: screenHeight * 0.04), 
+              SizedBox(height: screenHeight * 0.04),
               const CustomAppBar(),
               SizedBox(height: screenHeight * 0.02),
               const CustomTextField(),
-              SizedBox(height: screenHeight * 0.02), 
+              SizedBox(height: screenHeight * 0.02),
               const CustomOutLine(
                 textbutton: AppString.seeAll,
                 title: AppString.categories,
               ),
-              SizedBox(height: screenHeight * 0.01), 
-              
-            
+              SizedBox(height: screenHeight * 0.01),
               SizedBox(
-                height: screenHeight * 0.1, 
+                height: screenHeight * 0.1,
                 child: const CustomCategoryListView(),
               ),
-              SizedBox(height: screenHeight * 0.02), 
-              
+              SizedBox(height: screenHeight * 0.02),
               const CustomOutLine(
                 textbutton: AppString.seeAll,
                 title: AppString.recommendation,
               ),
-              SizedBox(height: screenHeight * 0.01), 
-              
+              SizedBox(height: screenHeight * 0.01),
               SizedBox(
-                height: screenHeight * 0.26, 
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 5,
-                  itemBuilder: (context, index) => Padding(
-                    padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.02), 
-                    child: GestureDetector(
-                      onTap: () {
-                       Navigator.push(
-  context,
-  MaterialPageRoute(
-    builder: (context) => DetialsView(),
-  ),
-);
-                      },
-                      child: const RecommendationRecipe(),
-                    ),
-                  ),
-                ),
+                height: screenHeight * 0.26,
+                child: RecommendationRecipe(),
               ),
-              SizedBox(height: screenHeight * 0.02), 
-
-              GestureDetector(
-                onTap: () {
-                 Navigator.push(
-  context,
-  MaterialPageRoute(
-    builder: (context) => DetialsView(),
-  ),
-);
-                      
-                } 
-              
-               , child: const RecipeOfTheWeek()),
+              SizedBox(height: screenHeight * 0.02),
+           
+                const RecipeOfTheWeek(),
             ],
           ),
         ),
@@ -92,3 +59,4 @@ class HomeViewBody extends StatelessWidget {
     );
   }
 }
+

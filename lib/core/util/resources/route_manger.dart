@@ -14,7 +14,7 @@
 //   static const String bottomNavBar = '/bottomNavBar';
 //   static const String categoryDetails = '/categoryDetails';
 //   static const String detials = '/detials';
-//    static const String categoryMeals = '/categoryMeals'; 
+//    static const String categoryMeals = '/categoryMeals';
 
 //   static final GoRouter router = GoRouter(
 //     routes: [
@@ -33,7 +33,7 @@
 //   GoRoute(
 //   path: categoryMeals,
 //   builder: (context, state) {
-//     final category = state.extra as Category; 
+//     final category = state.extra as Category;
 //     return CategoryMealscreen(category: category);
 //   },
 // ),
@@ -44,7 +44,7 @@
 //           return DetialsView(route: prevRoute);
 //         },
 //       ),
-      
+
 //     ],
 //   );
 // }

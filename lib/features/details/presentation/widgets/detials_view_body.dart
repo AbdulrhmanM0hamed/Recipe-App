@@ -6,10 +6,15 @@ import 'package:recipe_app/features/details/presentation/widgets/info_about_reci
 import 'package:recipe_app/features/details/presentation/widgets/outline_details_view.dart';
 import 'package:recipe_app/features/details/presentation/widgets/recipe_name_with_rate.dart';
 import 'package:recipe_app/features/details/presentation/widgets/subtile_details_view.dart';
+import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
 
-class DetialsViewBody extends StatelessWidget {
-  const DetialsViewBody({super.key, });
+class DetailsViewBody extends StatelessWidget {
+  final Meal meal; // إضافة متغير لاستقبال الوجبة
 
+  const DetailsViewBody({
+    super.key,
+    required this.meal, // استلام الوجبة
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,42 +22,41 @@ class DetialsViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomHeadDetails(),
-          const Padding(
+          CustomHeadDetails(meal: meal), // تمرير الوجبة إلى CustomHeadDetails
+          Padding(
             padding: EdgeInsets.symmetric(horizontal: AppPadding.p20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                RecipeNameWithRate(),
-                InfoAboutRecipe(),
-                SizedBox(height: 20),
-                OutlineDetailsView(title: "Description"),
+                RecipeNameWithRate(meal: meal), // تمرير الوجبة
+                const InfoAboutRecipe(), // تمرير الوجبة
+                const SizedBox(height: 20),
+                const OutlineDetailsView(title: "Category"),
                 SubtileDetialsView(
-                  subtile: "subtile",
+                  subtile: meal.strCategory,
                 ),
-                SizedBox(height: 20),
-                OutlineDetailsView(title: "Ingredients"),
+                const SizedBox(height: 20),
+                const OutlineDetailsView(title: "Ingredients"),
+                ...List.generate(meal.ingredients.length, (index) {
+                  if (meal.ingredients[index] != null &&
+                      meal.ingredients[index]!.isNotEmpty) {
+                    return SubtileDetialsView(
+                      subtile:
+                          "${meal.ingredients[index]} - ${meal.measures[index] ?? "not found"}",
+                    );
+                  }
+                  return const SizedBox.shrink();
+                }),
+                const SizedBox(height: 10),
+                const OutlineDetailsView(title: "Instructions"),
                 SubtileDetialsView(
-                  subtile: "subtile",
-                ),
-                SizedBox(height: 10),
-                OutlineDetailsView(title: "How To Prepare"),
-                SubtileDetialsView(
-                  subtile: """
-  1. تحضير المكرونة:
-  في وعاء كبير، ضعي الماء على النار حتى يغلي وأضيفي الملح.
-  أضيفي المكرونة واتركيها تسلق حتى تصبح نصف ناضجة، ثم صفيها وضعيها جانباً.
-
-  
-  وبذلك تكون قد حضرت وجبة مكرونة بالبشاميل شهية في البيت!
-  """,
+                  subtile: meal.strInstructions,
                 ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
   }
 }
-

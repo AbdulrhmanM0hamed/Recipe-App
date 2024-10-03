@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
 
 class CustomHeadDetails extends StatelessWidget {
   const CustomHeadDetails({
     super.key,
-  
+    required this.meal
   });
+
+     final Meal meal ; 
 
 
   @override
@@ -14,9 +17,9 @@ class CustomHeadDetails extends StatelessWidget {
       children: [
         AspectRatio(
           aspectRatio: 3.2 / 3,
-          child: SvgPicture.asset(
-            "assets/images/wgba.svg",
-            fit: BoxFit.cover,
+          child: Image.network(
+            meal.strMealThumb,
+            fit: BoxFit.fill,
           ),
         ),
         Positioned(
@@ -33,12 +36,8 @@ class CustomHeadDetails extends StatelessWidget {
               icon: const Icon(Icons.arrow_back, color: Colors.black),
               onPressed: () {
                 // GoRouter.of(context).go(prevRoute);
-    
-             
-                  Navigator.pop(context);
-      
-                 
-            
+
+                Navigator.pop(context);
               },
             ),
           ),

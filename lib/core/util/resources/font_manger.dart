@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
- class FontConstant {
-  static const String montserrat = "Montserrat" ; 
-  static const String gT_Sectra_Fine = "GT Sectra Fine" ; 
-   
- }
+class FontConstant {
+  static const String montserrat = "Montserrat";
+  static const String gT_Sectra_Fine = "GT Sectra Fine";
+}
 
 class FontWeightManger {
   static const FontWeight Light = FontWeight.w300;
@@ -22,7 +21,7 @@ class FontSize {
   static const double size18 = 18.0;
   static const double size20 = 20.0;
   static const double size22 = 22.0;
-   static const double size24 = 24.0;
+  static const double size24 = 24.0;
 
   static const double size30 = 30.0;
 }

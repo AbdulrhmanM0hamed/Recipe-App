@@ -13,15 +13,13 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-        
-          hintText: AppString.search ,
+          hintText: AppString.search,
           prefixIcon: const Icon(FontAwesomeIcons.magnifyingGlass),
           suffixIcon: SvgPicture.asset(
             AssetsManger.filter,
             fit: BoxFit.none,
           ),
-          border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16))),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(16))),
     );
   }
 }

@@ -16,7 +16,9 @@ class CategoriesView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: AppPadding.p20 , horizontal: AppMargin.m14 ), // لتوفير مساحة حول النص
+              padding: const EdgeInsets.symmetric(
+                  vertical: AppPadding.p20,
+                  horizontal: AppMargin.m14), // لتوفير مساحة حول النص
               child: Text(
                 "Choose Category",
                 style: getBoldStyle(
@@ -27,7 +29,7 @@ class CategoriesView extends StatelessWidget {
               ),
             ),
             const Expanded(
-              child: CategoriesViewBody(), // القسم الخاص بالـ GridView 
+              child: CategoriesViewBody(), // القسم الخاص بالـ GridView
             ),
           ],
         ),

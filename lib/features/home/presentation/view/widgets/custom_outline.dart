@@ -5,17 +5,19 @@ import 'package:recipe_app/core/util/resources/styles_manger.dart';
 
 class CustomOutLine extends StatelessWidget {
   const CustomOutLine({
-    super.key, required this.title, required this.textbutton,
+    super.key,
+    required this.title,
+    required this.textbutton,
   });
-  final String title ; 
-  final String  textbutton; 
+  final String title;
+  final String textbutton;
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          title ,
+          title,
           style: getSemiBoldStyle(
               color: ColorManger.black,
               fontFamily: FontConstant.montserrat,

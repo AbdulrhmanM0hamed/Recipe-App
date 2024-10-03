@@ -41,11 +41,18 @@ class CustomCategoryListView extends StatelessWidget {
 }
 
 List<Category> categories = [
-  Category(imagePath: AssetsManger.breakfast, title: AppString.breakfast ,mealCount: 10 ),
-  Category(imagePath: AssetsManger.lunch, title: AppString.lunch , mealCount: 10),
-  Category(imagePath: AssetsManger.dinner, title: AppString.dinner,mealCount: 10),
-  Category(imagePath: AssetsManger.dessert, title: AppString.dessert,mealCount: 10),
-  Category(imagePath: AssetsManger.snacks, title: AppString.snacks,mealCount: 10),
-  Category(imagePath: AssetsManger.drinks, title: AppString.drinks,mealCount: 10),
+  Category(
+      imagePath: AssetsManger.breakfast,
+      title: AppString.breakfast,
+      mealCount: 10),
+  Category(
+      imagePath: AssetsManger.lunch, title: AppString.lunch, mealCount: 10),
+  Category(
+      imagePath: AssetsManger.dinner, title: AppString.dinner, mealCount: 10),
+  Category(
+      imagePath: AssetsManger.dessert, title: AppString.dessert, mealCount: 10),
+  Category(
+      imagePath: AssetsManger.snacks, title: AppString.snacks, mealCount: 10),
+  Category(
+      imagePath: AssetsManger.drinks, title: AppString.drinks, mealCount: 10),
 ];
-

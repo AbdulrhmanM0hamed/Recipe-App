@@ -9,22 +9,20 @@ import 'package:recipe_app/features/home/presentation/view/widgets/custom_grid_v
 class CategoryMealscreen extends StatelessWidget {
   final Category category; // Using category only
 
-  const CategoryMealscreen({super.key, required this.category}); // Removed unnecessary parameter
+  const CategoryMealscreen(
+      {super.key, required this.category}); // Removed unnecessary parameter
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: (){
-
-                  Navigator.pop(context);
-             
-               
-          
-                     
-                  }, icon: Icon(Icons.arrow_back)),
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.arrow_back)),
         title: Text(
-          category.title, 
+          category.title,
           style: getBoldStyle(
             color: ColorManger.black,
             fontFamily: FontConstant.montserrat,
@@ -36,7 +34,9 @@ class CategoryMealscreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(AppPadding.p8),
-        child: CustomGridView(category: category), // Pass the category to your custom grid view
+        child: CustomGridView(
+            category: category
+            ),
       ),
     );
   }

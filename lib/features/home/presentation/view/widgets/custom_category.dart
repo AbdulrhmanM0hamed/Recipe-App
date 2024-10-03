@@ -19,7 +19,7 @@ class CustomCategory extends StatelessWidget {
       width: 90,
       child: Column(
         children: [
-        const  SizedBox(
+          const SizedBox(
             height: 2,
           ),
           SvgPicture.asset(
@@ -28,7 +28,7 @@ class CustomCategory extends StatelessWidget {
             width: 55,
             height: 55,
           ),
-          const  SizedBox(
+          const SizedBox(
             height: 3,
           ),
           Text(

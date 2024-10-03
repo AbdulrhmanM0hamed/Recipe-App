@@ -11,16 +11,15 @@ class InfoAboutRecipe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Text("By Rachel William",
           style: getRegularStyle(
               fontFamily: FontConstant.montserrat,
               color: ColorManger.lightGrey,
               fontSize: FontSize.size14)),
-              SizedBox(height: 10,),
+      SizedBox(
+        height: 10,
+      ),
       Row(
         children: [
           Icon(Icons.access_time_rounded, color: ColorManger.lightGrey),

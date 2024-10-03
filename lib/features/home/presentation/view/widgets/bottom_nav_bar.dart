@@ -14,15 +14,14 @@ class CustomBottomNavBar extends StatefulWidget {
 
 class _MyAppState extends State<CustomBottomNavBar> {
   int _page = 0;
- final GlobalKey<CurvedNavigationBarState>  _bottomNavigationKey = GlobalKey();
+  final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 
   // إضافة صفحات (شاشات) لعرضها بناءً على الـ index
-  final List<Widget> _pages = const[
+  final List<Widget> _pages = const [
     HomeView(),
     CategoriesView(),
-   SearchView() , 
-   Profile(), 
-    
+    SearchView(),
+    Profile(),
   ];
 
   @override
@@ -30,12 +29,20 @@ class _MyAppState extends State<CustomBottomNavBar> {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
         key: _bottomNavigationKey,
-        items:  [
-          Icon(Icons.home, size: 30  , color: _page == 0 ? ColorManger.green : ColorManger.grey1,),
-          Icon(Icons.category, size: 30 , color:  _page == 1 ? ColorManger.green : ColorManger.grey1 ),
-          Icon(FontAwesomeIcons.magnifyingGlass , color:  _page == 2 ? ColorManger.green : ColorManger.grey1 ),
-          Icon(Icons.person , size: 30  , color:  _page == 3 ? ColorManger.green : ColorManger.grey1 ),
-
+        items: [
+          Icon(
+            Icons.home,
+            size: 30,
+            color: _page == 0 ? ColorManger.green : ColorManger.grey1,
+          ),
+          Icon(Icons.category,
+              size: 30,
+              color: _page == 1 ? ColorManger.green : ColorManger.grey1),
+          Icon(FontAwesomeIcons.magnifyingGlass,
+              color: _page == 2 ? ColorManger.green : ColorManger.grey1),
+          Icon(Icons.person,
+              size: 30,
+              color: _page == 3 ? ColorManger.green : ColorManger.grey1),
         ],
         onTap: (index) {
           setState(() {
@@ -50,4 +57,3 @@ class _MyAppState extends State<CustomBottomNavBar> {
     );
   }
 }
-
