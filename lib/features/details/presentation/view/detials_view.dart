@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:recipe_app/features/details/presentation/widgets/detials_view_body.dart';
 import 'package:recipe_app/features/details/presentation/widgets/watch_video.dart';
 import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
+import 'package:recipe_app/features/meals_view/data/model/meals_o_fcategories/meal.dart';
 
 class DetialsView extends StatelessWidget {
   const DetialsView({super.key, required this.meal});
-  final MealRandom meal;
+  final Meal meal;
+
+
+
 
   @override
   Widget build(BuildContext context) {

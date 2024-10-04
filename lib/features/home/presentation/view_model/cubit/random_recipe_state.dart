@@ -12,7 +12,7 @@ final class RandomRecipeInitial extends RandomRecipeState {}
 final class RandomRecipeLoading extends RandomRecipeState {}
 
 final class RandomRecipeSuccess extends RandomRecipeState {
-  final List<MealRandom> meals;
+  final List<Meal> meals;
 
   const RandomRecipeSuccess({required this.meals});
 }

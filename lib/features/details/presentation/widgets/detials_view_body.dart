@@ -7,9 +7,10 @@ import 'package:recipe_app/features/details/presentation/widgets/outline_details
 import 'package:recipe_app/features/details/presentation/widgets/recipe_name_with_rate.dart';
 import 'package:recipe_app/features/details/presentation/widgets/subtile_details_view.dart';
 import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
+import 'package:recipe_app/features/meals_view/data/model/meals_o_fcategories/meal.dart';
 
 class DetailsViewBody extends StatelessWidget {
-  final MealRandom meal; // إضافة متغير لاستقبال الوجبة
+  final Meal meal; // إضافة متغير لاستقبال الوجبة
 
   const DetailsViewBody({
     super.key,

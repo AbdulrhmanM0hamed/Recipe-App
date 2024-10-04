@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
+import 'package:recipe_app/features/meals_view/data/model/meals_o_fcategories/meal.dart';
 
 class CustomHeadDetails extends StatelessWidget {
   const CustomHeadDetails({super.key, required this.meal});
 
-  final MealRandom meal;
+  final Meal meal;
 
   @override
   Widget build(BuildContext context) {

@@ -8,7 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 class WatchVideoYoutupe extends StatelessWidget {
   WatchVideoYoutupe({super.key, required this.meal});
 
-  final MealRandom meal;
+  final Meal meal;
 
   @override
   Widget build(BuildContext context) {

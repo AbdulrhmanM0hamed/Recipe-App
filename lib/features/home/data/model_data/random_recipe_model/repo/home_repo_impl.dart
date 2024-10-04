@@ -11,12 +11,12 @@ class HomeRepoImpl implements HomeRepo {
   HomeRepoImpl(this.apiService);
 
   @override
-  Future<Either<Failuer, List<MealRandom>>> fetchRandomRecipe() async {
+  Future<Either<Failuer, List<Meal>>> fetchRandomRecipe() async {
     try {
       final data = await apiService.get(endpoint: 'random.php');
       if (data['meals'] != null) {
-        List<MealRandom> meals =
-            (data['meals'] as List).map((item) => MealRandom.fromJson(item)).toList();
+        List<Meal> meals =
+            (data['meals'] as List).map((item) => Meal.fromJson(item)).toList();
 
         return Right(meals);
       } else {

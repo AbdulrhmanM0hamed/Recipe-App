@@ -1,8 +1,8 @@
 import 'package:equatable/equatable.dart';
 
-class MealRandom extends Equatable {
+class Meal extends Equatable {
   final String? idMeal;
-  final String? strMeal;
+  final String strMeal;
   final dynamic strDrinkAlternate;
   final String strCategory;
   final String? strArea;
@@ -17,9 +17,9 @@ class MealRandom extends Equatable {
   final dynamic strCreativeCommonsConfirmed;
   final dynamic dateModified;
 
-  const MealRandom({
+  const Meal({
     this.idMeal,
-    this.strMeal,
+   required this.strMeal,
     this.strDrinkAlternate,
     required this.strCategory,
     this.strArea,
@@ -35,7 +35,7 @@ class MealRandom extends Equatable {
     this.dateModified,
   });
 
-  factory MealRandom.fromJson(Map<String, dynamic> json) {
+  factory Meal.fromJson(Map<String, dynamic> json) {
     List<String?> ingredients = [];
     List<String?> measures = [];
 
@@ -44,9 +44,9 @@ class MealRandom extends Equatable {
       measures.add(json['strMeasure$i'] as String?);
     }
 
-    return MealRandom(
+    return Meal(
       idMeal: json['idMeal'] as String?,
-      strMeal: json['strMeal'] as String?,
+      strMeal: json['strMeal'] as String,
       strDrinkAlternate: json['strDrinkAlternate'] as dynamic,
       strCategory: json['strCategory'] as String,
       strArea: json['strArea'] as String?,

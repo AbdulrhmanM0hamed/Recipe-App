@@ -11,9 +11,9 @@ final class MealsInitial extends MealsState {}
 final class MealsLoadingState extends MealsState {}
 final class MealsSuccessState extends MealsState {
 
- final List<Meals> meal ;
+ final List<Meal> meals ;
 
-  const MealsSuccessState({required this.meal}); 
+  const MealsSuccessState({required this.meals}); 
 
 
 }

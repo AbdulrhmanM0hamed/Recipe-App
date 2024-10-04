@@ -14,7 +14,7 @@ class RandomRecipeCubit extends Cubit<RandomRecipeState> {
   Future<void> fetchRandomRecipe() async {
     emit(RandomRecipeLoading());
 
-    List<MealRandom> meals = []; // قائمة لحفظ الوجبات
+    List<Meal> meals = []; // قائمة لحفظ الوجبات
 
     try {
       // حلقة لجلب 5 وجبات عشوائية

@@ -10,9 +10,9 @@ class NumberOfRecipeCubit extends Cubit<NumberOfRecipeState> {
   NumberOfRecipeCubit(this.numberORrecipe) : super(NumberOfRecipeInitial());
 
   NumberOfRecipeRepo numberORrecipe;
-
-  Future<void> fetchNumberOFRecipe(String categoryName) async {
-    emit(NumberOfRecipeLoadingState());
+Future<void> fetchNumberOFRecipe(String categoryName) async {
+  emit(NumberOfRecipeLoadingState());
+  try {
     var result = await numberORrecipe.fetchNumberOFRecipe(categoryName);
 
     result.fold(
@@ -20,8 +20,15 @@ class NumberOfRecipeCubit extends Cubit<NumberOfRecipeState> {
         emit(NumberOfRecipeFailureState(errMessage: failure.errMessage));
       },
       (number_of_recipe) {
-        emit(NumberOfRecipeSuccessState(number_of_recipe: number_of_recipe));
+        // تأكد من أن الـ Cubit لم يتم إغلاقه قبل إصدار الحالة
+        if (!isClosed) {
+          emit(NumberOfRecipeSuccessState(number_of_recipe: number_of_recipe));
+        }
       },
     );
+  } catch (e) {
+    // التعامل مع الأخطاء بشكل عام
+    emit(NumberOfRecipeFailureState(errMessage: "Unexpected Error"));
   }
+}
 }

@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:dartz/dartz.dart';
 import 'package:recipe_app/core/errors/failuer.dart';
 import 'package:recipe_app/core/util/api_service.dart';
+import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
 
 import 'package:recipe_app/features/meals_view/data/model/meals_o_fcategories/meal.dart';
 import 'package:recipe_app/features/meals_view/data/repo/meals_repo.dart';
@@ -12,12 +13,12 @@ class MealsRepoImpl implements MealsRepo {
   MealsRepoImpl(this.apiService);
 
   @override
-  Future<Either<Failuer, List<Meals>>> fetchMeals(String mealName) async {
+  Future<Either<Failuer, List<Meal>>> fetchMeals(String categoryName) async {
     try {
-      final data = await apiService.getMeals(endpoint: mealName);
+      final data = await apiService.getMeals(endpoint: categoryName);
       if (data['meals'] != null) {
-        List<Meals> meals =
-            (data['meals'] as List).map((item) => Meals.fromJson(item)).toList();
+        List<Meal> meals =
+            (data['meals'] as List).map((item) => Meal.fromJson(item)).toList();
 
         return Right(meals);
       } else {
