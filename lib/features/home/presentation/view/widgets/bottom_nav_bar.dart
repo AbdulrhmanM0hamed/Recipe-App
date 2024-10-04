@@ -2,6 +2,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:recipe_app/core/util/resources/color_manger.dart';
+import 'package:recipe_app/features/categories/data/repo/number_of_recipe.dart/number_of_recipe_repo.dart';
 import 'package:recipe_app/features/categories/presentation/view/categories_view.dart';
 import 'package:recipe_app/features/home/presentation/view/home_view.dart';
 import 'package:recipe_app/features/profile/presentation/view/profile.dart';
@@ -11,6 +12,8 @@ class CustomBottomNavBar extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
 }
+
+
 
 class _MyAppState extends State<CustomBottomNavBar> {
   int _page = 0;
@@ -23,7 +26,9 @@ class _MyAppState extends State<CustomBottomNavBar> {
     SearchView(),
     Profile(),
   ];
+ 
 
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -42,6 +42,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     animationFunction();
     BlocProvider.of<RandomRecipeCubit>(context).fetchRandomRecipe();
      BlocProvider.of<CategoriesCubit>(context).fetchCategories();
+     
 
   }
 
