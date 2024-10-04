@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:recipe_app/core/util/api_service.dart';
 import 'package:recipe_app/core/util/resources/theme_manger.dart';
 import 'package:recipe_app/core/util/service_locator.dart';
-import 'package:recipe_app/features/categories/data/repo/categories_repo.dart';
 import 'package:recipe_app/features/categories/data/repo/categories_repo_impl.dart';
 import 'package:recipe_app/features/categories/presentation/view_model/cubit/categories_cubit.dart';
 import 'package:recipe_app/features/home/data/model_data/random_recipe_model/repo/home_repo_impl.dart';

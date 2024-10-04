@@ -1,19 +1,19 @@
 import 'package:equatable/equatable.dart';
 
-class Category extends Equatable {
+class CategoryMeal extends Equatable {
   final String? idCategory;
   final String strCategory;
   final String strCategoryThumb;
   final String? strCategoryDescription;
 
-  const Category({
+  const CategoryMeal({
     this.idCategory,
    required this.strCategory,
    required this.strCategoryThumb,
     this.strCategoryDescription,
   });
 
-  factory Category.fromJson(Map<String, dynamic> json) => Category(
+  factory CategoryMeal.fromJson(Map<String, dynamic> json) => CategoryMeal(
         idCategory: json['idCategory'] as String?,
         strCategory: json['strCategory'] as String,
         strCategoryThumb: json['strCategoryThumb'] as String,

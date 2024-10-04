@@ -3,7 +3,6 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:recipe_app/core/util/resources/assets_manger.dart';
 import 'package:recipe_app/core/util/resources/color_manger.dart';
-import 'package:recipe_app/features/details/presentation/view/detials_view.dart';
 import 'package:recipe_app/features/home/presentation/view/models/categories_model.dart';
 
 class CustomGridView extends StatelessWidget {

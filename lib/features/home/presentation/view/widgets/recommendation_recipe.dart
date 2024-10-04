@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:recipe_app/core/util/resources/assets_manger.dart';
 import 'package:recipe_app/core/util/resources/color_manger.dart';
 import 'package:recipe_app/core/util/resources/font_manger.dart';
 import 'package:recipe_app/core/util/resources/styles_manger.dart';

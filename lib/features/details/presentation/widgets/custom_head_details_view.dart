@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
 
 class CustomHeadDetails extends StatelessWidget {

@@ -3,13 +3,13 @@ import 'package:equatable/equatable.dart';
 import 'category.dart';
 
 class Categories extends Equatable {
-  final List<Category>? categories;
+  final List<CategoryMeal>? categories;
 
   const Categories({this.categories});
 
   factory Categories.fromJson(Map<String, dynamic> json) => Categories(
         categories: (json['categories'] as List<dynamic>?)
-            ?.map((e) => Category.fromJson(e as Map<String, dynamic>))
+            ?.map((e) => CategoryMeal.fromJson(e as Map<String, dynamic>))
             .toList(),
       );
 

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/core/util/resources/string_manger.dart';
-import 'package:recipe_app/features/details/presentation/view/detials_view.dart';
 import 'package:recipe_app/features/home/presentation/view/widgets/custom_app_bar.dart';
 import 'package:recipe_app/features/home/presentation/view/widgets/custom_outline.dart';
 import 'package:recipe_app/features/home/presentation/view/widgets/custom_text_field.dart';

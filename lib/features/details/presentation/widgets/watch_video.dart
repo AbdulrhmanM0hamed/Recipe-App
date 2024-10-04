@@ -59,6 +59,7 @@ Future<void> launchCustomUr(BuildContext context, String? url) async {
   }
 }
 
+
 void customSnackBar(context, String text) {
   ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(

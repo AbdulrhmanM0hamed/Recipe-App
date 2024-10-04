@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:recipe_app/core/util/resources/color_manger.dart';
+import 'package:recipe_app/features/categories/presentation/view/view_model/number_of_recipe_cubit/cubit/number_of_recipe_cubit.dart';
 import 'package:recipe_app/features/categories/presentation/view_model/cubit/categories_cubit.dart';
-import 'package:recipe_app/features/home/presentation/view/category_meals_view.dart';
-import 'package:recipe_app/features/home/presentation/view/models/categories_model.dart';
-import 'package:recipe_app/features/home/presentation/view/widgets/cutom_category_list_view.dart';
+
 
 class CategoriesViewBody extends StatelessWidget {
   const CategoriesViewBody({super.key});
@@ -15,7 +13,6 @@ class CategoriesViewBody extends StatelessWidget {
     return BlocBuilder<CategoriesCubit, CategoriesState>(
       builder: (BuildContext context, state) {
         if (state is CategoriesSuccessState) {
-          // تقليل عدد العناصر بمقدار واحد لاستثناء العنصر السادس
           return GridView.builder(
             padding: const EdgeInsets.all(20),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -26,7 +23,6 @@ class CategoriesViewBody extends StatelessWidget {
             itemCount: state.categories.length - 1, 
             itemBuilder: (context, index) {
               final actualIndex = index >= 6 ? index + 1 : index;
-
               return Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
@@ -52,10 +48,16 @@ class CategoriesViewBody extends StatelessWidget {
                       style: const TextStyle(
                           fontSize: 24, fontWeight: FontWeight.bold),
                     ),
-                    Text(
-                      '5 meals',
-                      style: TextStyle(fontSize: 14, color: ColorManger.grey1),
-                    ),
+                    // BlocBuilder<NumberOfRecipeCubit , NumberOfRecipeState>(
+                    //   builder: (context, state) {
+                    //     return 
+                     Text(
+                        '5 meals',
+                        style: TextStyle(fontSize: 14, color: ColorManger.grey1),
+                      )
+                    
+                      
+                    
                   ],
                 ),
               );
