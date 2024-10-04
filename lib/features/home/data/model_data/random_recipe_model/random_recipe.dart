@@ -3,13 +3,13 @@ import 'package:equatable/equatable.dart';
 import 'meal.dart';
 
 class RandomRecipe extends Equatable {
-  final List<Meal>? meals;
+  final List<MealRandom>? meals;
 
   const RandomRecipe({this.meals});
 
   factory RandomRecipe.fromJson(Map<String, dynamic> json) => RandomRecipe(
         meals: (json['meals'] as List<dynamic>?)
-            ?.map((e) => Meal.fromJson(e as Map<String, dynamic>))
+            ?.map((e) => MealRandom.fromJson(e as Map<String, dynamic>))
             .toList(),
       );
 

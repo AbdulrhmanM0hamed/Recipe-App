@@ -10,14 +10,14 @@ class CategoriesRepoImpl implements CategoriesRepo {
 
   CategoriesRepoImpl(this.apiService);
 
-  
-
   @override
   Future<Either<Failuer, List<CategoryMeal>>> fetchCategories() async {
     try {
       final data = await apiService.get(endpoint: 'categories.php');
       if (data['categories'] != null) {
-        List<CategoryMeal> categories =(data['categories'] as List).map((item) => CategoryMeal.fromJson(item)).toList();
+        List<CategoryMeal> categories = (data['categories'] as List)
+            .map((item) => CategoryMeal.fromJson(item))
+            .toList();
 
         return Right(categories);
       } else {
@@ -30,6 +30,4 @@ class CategoriesRepoImpl implements CategoriesRepo {
       return Left(ServerFailure(errMessage: "Unexpected Error"));
     }
   }
-  
-
 }

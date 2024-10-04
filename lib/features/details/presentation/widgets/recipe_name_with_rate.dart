@@ -9,7 +9,7 @@ class RecipeNameWithRate extends StatelessWidget {
     super.key,
     required this.meal,
   });
-  final Meal meal;
+  final MealRandom meal;
   @override
   Widget build(BuildContext context) {
     return Row(

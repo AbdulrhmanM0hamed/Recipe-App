@@ -4,7 +4,7 @@ import 'package:recipe_app/features/home/data/model_data/random_recipe_model/mea
 class CustomHeadDetails extends StatelessWidget {
   const CustomHeadDetails({super.key, required this.meal});
 
-  final Meal meal;
+  final MealRandom meal;
 
   @override
   Widget build(BuildContext context) {

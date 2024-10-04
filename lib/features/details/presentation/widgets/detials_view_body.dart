@@ -9,7 +9,7 @@ import 'package:recipe_app/features/details/presentation/widgets/subtile_details
 import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
 
 class DetailsViewBody extends StatelessWidget {
-  final Meal meal; // إضافة متغير لاستقبال الوجبة
+  final MealRandom meal; // إضافة متغير لاستقبال الوجبة
 
   const DetailsViewBody({
     super.key,

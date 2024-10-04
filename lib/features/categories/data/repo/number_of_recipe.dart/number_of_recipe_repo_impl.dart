@@ -11,12 +11,15 @@ class NumberOfRecipeRepoImpl implements NumberOfRecipeRepo {
   NumberOfRecipeRepoImpl(this.apiService);
 
   @override
-  Future<Either<Failuer, List<NumberOfMeal>>> fetchNumberOFRecipe(String categoryName) async {
+  Future<Either<Failuer, List<NumberOfMeal>>> fetchNumberOFRecipe(
+      String categoryName) async {
     try {
       final data = await apiService.getNumber(endpoint: categoryName);
-      
+
       if (data['meals'] != null) {
-        List<NumberOfMeal> numberOfRecipe = (data['meals'] as List).map((item) => NumberOfMeal.fromJson(item)).toList();
+        List<NumberOfMeal> numberOfRecipe = (data['meals'] as List)
+            .map((item) => NumberOfMeal.fromJson(item))
+            .toList();
 
         return Right(numberOfRecipe);
       } else {

@@ -5,7 +5,7 @@ import 'package:recipe_app/features/home/data/model_data/random_recipe_model/mea
 
 class DetialsView extends StatelessWidget {
   const DetialsView({super.key, required this.meal});
-  final Meal meal;
+  final MealRandom meal;
 
   @override
   Widget build(BuildContext context) {

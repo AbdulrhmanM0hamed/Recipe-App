@@ -8,21 +8,17 @@ sealed class CategoriesState extends Equatable {
 }
 
 final class CategoriesInitial extends CategoriesState {}
+
 final class CategoriesLoadingState extends CategoriesState {}
 
 final class CategoriesSuccessState extends CategoriesState {
+  final List<CategoryMeal> categories;
 
-final List<CategoryMeal> categories ;
-
-  const CategoriesSuccessState({required this.categories}); 
-
-
+  const CategoriesSuccessState({required this.categories});
 }
+
 final class CategoriesFailureState extends CategoriesState {
+  final String errMessage;
 
- final String errMessage ;
-
- const CategoriesFailureState({required this.errMessage}); 
+  const CategoriesFailureState({required this.errMessage});
 }
-
-

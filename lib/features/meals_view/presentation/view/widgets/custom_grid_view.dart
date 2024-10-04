@@ -1,34 +1,45 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:recipe_app/core/util/resources/assets_manger.dart';
+
 import 'package:recipe_app/core/util/resources/color_manger.dart';
-import 'package:recipe_app/features/home/presentation/models/categories_model.dart';
+import 'package:recipe_app/features/categories/data/model/category.dart';
+import 'package:recipe_app/features/details/presentation/view/detials_view.dart';
+import 'package:recipe_app/features/meals_view/presentation/view_model/cubit/meals_cubit.dart';
 
 class CustomGridView extends StatelessWidget {
   const CustomGridView({super.key, required this.category});
 
-  final CategoryCart category;
-
+  final CategoryMeal category;
   @override
   Widget build(BuildContext context) {
-    return GridView.custom(
-      gridDelegate: SliverWovenGridDelegate.count(
-        crossAxisCount: 2,
-        mainAxisSpacing: 3,
-        crossAxisSpacing: 3,
-        pattern: const [
-          WovenGridTile(1),
-          WovenGridTile(
-            10 / 14,
-            crossAxisRatio: 0.93,
-            alignment: AlignmentDirectional.center,
-          ),
-        ],
-      ),
-      childrenDelegate: SliverChildBuilderDelegate(
-        childCount: 10,
-        (context, index) => Container(
+    return BlocBuilder<MealsCubit, MealsState>(
+      builder: (context, state) {
+        if (state is MealsSuccessState) {
+  return GridView.custom(
+    gridDelegate: SliverWovenGridDelegate.count(
+      crossAxisCount: 2,
+      mainAxisSpacing: 3,
+      crossAxisSpacing: 3,
+      pattern: const [
+        WovenGridTile(1),
+        WovenGridTile(
+          10 / 14,
+          crossAxisRatio: 0.90,
+          alignment: AlignmentDirectional.center,
+        ),
+      ],
+    ),
+    childrenDelegate: SliverChildBuilderDelegate(
+      childCount: state.meal.length,
+      (context, index) => GestureDetector(
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            DetialsView(meal: meal)
+
+          },)) ;
+        },
+        child: Container(
           margin: const EdgeInsets.all(5),
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
@@ -41,23 +52,24 @@ class CustomGridView extends StatelessWidget {
               Expanded(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
-                  child: SvgPicture.asset(
-                    AssetsManger.ferakh, // استبدلها بأصول الصور
+                  child: Image.network(
+                    state.meal[index].strMealThumb,
                     height: index.isEven ? 200 : 190,
+                    width: double.infinity,
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
               const SizedBox(height: 10),
-              const Text(
-                "Recipe Name", // يمكنك استخدام بيانات ديناميكية هنا
+               Text(
+                state.meal[index].strMeal ,  // يمكنك استخدام بيانات ديناميكية هنا
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                style:const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 3),
               Text(
-                category.title, // عرض اسم الصنف الممرر
+                category.strCategory,
                 style: const TextStyle(color: Colors.grey, fontSize: 13),
               ),
               const SizedBox(height: 3),
@@ -83,6 +95,17 @@ class CustomGridView extends StatelessWidget {
           ),
         ),
       ),
+    ),
+  );
+}
+else if (state is MealsFailureState)
+
+ return  Text(state.errMessage);
+
+else{
+  return const Center(child:  CircularProgressIndicator(),) ;
+}
+      },
     );
   }
 }

@@ -8,7 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 class WatchVideoYoutupe extends StatelessWidget {
   WatchVideoYoutupe({super.key, required this.meal});
 
-  final Meal meal;
+  final MealRandom meal;
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +58,6 @@ Future<void> launchCustomUr(BuildContext context, String? url) async {
     }
   }
 }
-
 
 void customSnackBar(context, String text) {
   ScaffoldMessenger.of(context).showSnackBar(

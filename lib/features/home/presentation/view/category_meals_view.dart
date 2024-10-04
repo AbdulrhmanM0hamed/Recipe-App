@@ -3,11 +3,11 @@ import 'package:recipe_app/core/util/resources/color_manger.dart';
 import 'package:recipe_app/core/util/resources/font_manger.dart';
 import 'package:recipe_app/core/util/resources/styles_manger.dart';
 import 'package:recipe_app/core/util/resources/values_manger.dart';
-import 'package:recipe_app/features/home/presentation/models/categories_model.dart';
+import 'package:recipe_app/features/categories/data/model/category.dart';
 import 'package:recipe_app/features/meals_view/presentation/view/widgets/custom_grid_view.dart';
 
 class CategoryMealscreen extends StatelessWidget {
-  final CategoryCart category; // Using category only
+  final CategoryMeal category; // Using category only
 
   const CategoryMealscreen(
       {super.key, required this.category}); // Removed unnecessary parameter
@@ -22,7 +22,7 @@ class CategoryMealscreen extends StatelessWidget {
             },
             icon: Icon(Icons.arrow_back)),
         title: Text(
-          category.title,
+          category.strCategory,
           style: getBoldStyle(
             color: ColorManger.black,
             fontFamily: FontConstant.montserrat,

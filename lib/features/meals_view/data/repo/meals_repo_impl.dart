@@ -2,21 +2,22 @@ import 'package:dio/dio.dart';
 import 'package:dartz/dartz.dart';
 import 'package:recipe_app/core/errors/failuer.dart';
 import 'package:recipe_app/core/util/api_service.dart';
-import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
-import 'package:recipe_app/features/home/data/model_data/random_recipe_model/repo/home_repo.dart';
 
-class HomeRepoImpl implements HomeRepo {
+import 'package:recipe_app/features/meals_view/data/model/meals_o_fcategories/meal.dart';
+import 'package:recipe_app/features/meals_view/data/repo/meals_repo.dart';
+
+class MealsRepoImpl implements MealsRepo {
   final ApiService apiService;
 
-  HomeRepoImpl(this.apiService);
+  MealsRepoImpl(this.apiService);
 
   @override
-  Future<Either<Failuer, List<MealRandom>>> fetchRandomRecipe() async {
+  Future<Either<Failuer, List<Meals>>> fetchMeals(String mealName) async {
     try {
-      final data = await apiService.get(endpoint: 'random.php');
+      final data = await apiService.getMeals(endpoint: mealName);
       if (data['meals'] != null) {
-        List<MealRandom> meals =
-            (data['meals'] as List).map((item) => MealRandom.fromJson(item)).toList();
+        List<Meals> meals =
+            (data['meals'] as List).map((item) => Meals.fromJson(item)).toList();
 
         return Right(meals);
       } else {
@@ -30,3 +31,4 @@ class HomeRepoImpl implements HomeRepo {
     }
   }
 }
+

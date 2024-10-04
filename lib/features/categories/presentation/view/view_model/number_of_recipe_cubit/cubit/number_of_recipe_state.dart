@@ -8,22 +8,17 @@ sealed class NumberOfRecipeState extends Equatable {
 }
 
 final class NumberOfRecipeInitial extends NumberOfRecipeState {}
+
 final class NumberOfRecipeLoadingState extends NumberOfRecipeState {}
+
 final class NumberOfRecipeSuccessState extends NumberOfRecipeState {
+  final List<NumberOfMeal> number_of_recipe;
 
-final List<NumberOfMeal> number_of_recipe ;
-
- const NumberOfRecipeSuccessState({required this.number_of_recipe}); 
-
-
+  const NumberOfRecipeSuccessState({required this.number_of_recipe});
 }
+
 final class NumberOfRecipeFailureState extends NumberOfRecipeState {
+  final String errMessage;
 
-final String errMessage ;
-
- const NumberOfRecipeFailureState({required this.errMessage}); 
-
+  const NumberOfRecipeFailureState({required this.errMessage});
 }
-
-
-

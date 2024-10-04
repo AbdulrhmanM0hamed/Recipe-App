@@ -4,5 +4,4 @@ import 'package:dartz/dartz.dart';
 
 abstract class CategoriesRepo {
   Future<Either<Failuer, List<CategoryMeal>>> fetchCategories();
-  
 }

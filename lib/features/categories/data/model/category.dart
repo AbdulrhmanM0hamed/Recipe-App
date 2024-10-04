@@ -8,8 +8,8 @@ class CategoryMeal extends Equatable {
 
   const CategoryMeal({
     this.idCategory,
-   required this.strCategory,
-   required this.strCategoryThumb,
+    required this.strCategory,
+    required this.strCategoryThumb,
     this.strCategoryDescription,
   });
 

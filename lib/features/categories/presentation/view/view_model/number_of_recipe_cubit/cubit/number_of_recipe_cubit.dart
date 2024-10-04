@@ -9,9 +9,9 @@ part 'number_of_recipe_state.dart';
 class NumberOfRecipeCubit extends Cubit<NumberOfRecipeState> {
   NumberOfRecipeCubit(this.numberORrecipe) : super(NumberOfRecipeInitial());
 
-NumberOfRecipeRepo numberORrecipe ; 
+  NumberOfRecipeRepo numberORrecipe;
 
- Future<void> fetchNumberOFRecipe(String categoryName) async {
+  Future<void> fetchNumberOFRecipe(String categoryName) async {
     emit(NumberOfRecipeLoadingState());
     var result = await numberORrecipe.fetchNumberOFRecipe(categoryName);
 
@@ -20,9 +20,8 @@ NumberOfRecipeRepo numberORrecipe ;
         emit(NumberOfRecipeFailureState(errMessage: failure.errMessage));
       },
       (number_of_recipe) {
-        emit(NumberOfRecipeSuccessState(number_of_recipe:number_of_recipe ));
+        emit(NumberOfRecipeSuccessState(number_of_recipe: number_of_recipe));
       },
     );
   }
-
 }

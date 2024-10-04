@@ -12,8 +12,6 @@ class CustomBottomNavBar extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
-
-
 class _MyAppState extends State<CustomBottomNavBar> {
   int _page = 0;
   final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
@@ -25,9 +23,7 @@ class _MyAppState extends State<CustomBottomNavBar> {
     SearchView(),
     Profile(),
   ];
- 
 
- 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
