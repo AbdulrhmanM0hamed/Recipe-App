@@ -2,7 +2,6 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:recipe_app/core/util/resources/color_manger.dart';
-import 'package:recipe_app/features/categories/data/repo/number_of_recipe.dart/number_of_recipe_repo.dart';
 import 'package:recipe_app/features/categories/presentation/view/categories_view.dart';
 import 'package:recipe_app/features/home/presentation/view/home_view.dart';
 import 'package:recipe_app/features/profile/presentation/view/profile.dart';

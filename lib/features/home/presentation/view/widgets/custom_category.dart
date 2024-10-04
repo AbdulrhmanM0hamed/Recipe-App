@@ -3,12 +3,12 @@ import 'package:flutter_svg/svg.dart';
 import 'package:recipe_app/core/util/resources/color_manger.dart';
 import 'package:recipe_app/core/util/resources/font_manger.dart';
 import 'package:recipe_app/core/util/resources/styles_manger.dart';
-import 'package:recipe_app/features/home/presentation/view/models/categories_model.dart';
+import 'package:recipe_app/features/home/presentation/models/categories_model.dart';
 
-class CustomCategory extends StatelessWidget {
+class RandomRecipeCart extends StatelessWidget {
   final CategoryCart category;
 
-  const CustomCategory({super.key, required this.category});
+  const RandomRecipeCart({super.key, required this.category});
 
   @override
   Widget build(BuildContext context) {

@@ -51,45 +51,55 @@ class CategoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(8),
-      decoration: BoxDecoration(
-        color: ColorManger.greenlight,
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Expanded(
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(16),
-              child: Image.network(
-                categoryThumb,
-                fit: BoxFit.fill,
-                width: MediaQuery.of(context).size.width * .4,
+    return GestureDetector(
+      onTap: () {
+
+        MaterialPageRoute(
+                      builder: (context) =>
+                          
+                    );
+        
+      },
+      child: Container(
+        padding: const EdgeInsets.all(8),
+        decoration: BoxDecoration(
+          color: ColorManger.greenlight,
+          borderRadius: BorderRadius.circular(8),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: Image.network(
+                  categoryThumb,
+                  fit: BoxFit.fill,
+                  width: MediaQuery.of(context).size.width * .4,
+                ),
               ),
             ),
-          ),
-          const SizedBox(height: 8),
-          Text(
-            categoryName,
-            style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-          BlocBuilder<NumberOfRecipeCubit, NumberOfRecipeState>(
-            builder: (context, recipeState) {
-              if (recipeState is NumberOfRecipeSuccessState) {
-                return Text(
-                  '${recipeState.number_of_recipe.length} meals',
-                  style: TextStyle(fontSize: 14, color: ColorManger.grey1),
-                );
-              } else if (recipeState is NumberOfRecipeFailureState) {
-                return Text(recipeState.errMessage);
-              } else {
-                return const Center(child: CircularProgressIndicator());
-              }
-            },
-          ),
-        ],
+            const SizedBox(height: 8),
+            Text(
+              categoryName,
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            BlocBuilder<NumberOfRecipeCubit, NumberOfRecipeState>(
+              builder: (context, recipeState) {
+                if (recipeState is NumberOfRecipeSuccessState) {
+                  return Text(
+                    '${recipeState.number_of_recipe.length} meals',
+                    style: TextStyle(fontSize: 14, color: ColorManger.grey1),
+                  );
+                } else if (recipeState is NumberOfRecipeFailureState) {
+                  return Text(recipeState.errMessage);
+                } else {
+                  return const Center(child: CircularProgressIndicator());
+                }
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
