@@ -3,7 +3,6 @@ import 'package:recipe_app/core/util/resources/color_manger.dart';
 import 'package:recipe_app/core/util/resources/font_manger.dart';
 import 'package:recipe_app/core/util/resources/styles_manger.dart';
 import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
-import 'package:recipe_app/features/meals_view/data/model/meals_o_fcategories/meal.dart';
 
 class RecipeNameWithRate extends StatelessWidget {
   const RecipeNameWithRate({
@@ -18,7 +17,7 @@ class RecipeNameWithRate extends StatelessWidget {
         Expanded(
           child: Text(
               maxLines: 6,
-              meal.strMeal ?? "not found",
+              meal.strMeal ,
               style: getBoldStyle(
                 color: ColorManger.black,
                 fontFamily: FontConstant.montserrat,

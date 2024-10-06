@@ -7,14 +7,13 @@ import 'package:recipe_app/features/details/presentation/widgets/outline_details
 import 'package:recipe_app/features/details/presentation/widgets/recipe_name_with_rate.dart';
 import 'package:recipe_app/features/details/presentation/widgets/subtile_details_view.dart';
 import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
-import 'package:recipe_app/features/meals_view/data/model/meals_o_fcategories/meal.dart';
 
 class DetailsViewBody extends StatelessWidget {
-  final Meal meal; // إضافة متغير لاستقبال الوجبة
+  final Meal meal;
 
   const DetailsViewBody({
     super.key,
-    required this.meal, // استلام الوجبة
+    required this.meal,
   });
 
   @override
@@ -23,14 +22,14 @@ class DetailsViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomHeadDetails(meal: meal), // تمرير الوجبة إلى CustomHeadDetails
+          CustomHeadDetails(meal: meal),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: AppPadding.p20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                RecipeNameWithRate(meal: meal), // تمرير الوجبة
-                const InfoAboutRecipe(), // تمرير الوجبة
+                RecipeNameWithRate(meal: meal),
+                const InfoAboutRecipe(),
                 const SizedBox(height: 20),
                 const OutlineDetailsView(title: "Category"),
                 SubtileDetialsView(

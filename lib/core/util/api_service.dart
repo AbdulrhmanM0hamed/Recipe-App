@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:recipe_app/features/categories/data/model/category.dart';
 
 class ApiService {
   final _baseUrl = "https://www.themealdb.com/api/json/v1/1/";
@@ -8,8 +9,13 @@ class ApiService {
       final _baseUrlMeals =
       "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
+      final _baseUrlcategory =
+      "www.themealdb.com/api/json/v1/1/filter.php?c=";
+
+
+
   final Dio _dio;
-  ApiService(this._dio);
+  ApiService(this._dio, );
   Future<Map<String, dynamic>> get({required String endpoint}) async {
     var response = await _dio.get('$_baseUrl$endpoint');
     return response.data;
@@ -20,9 +26,15 @@ class ApiService {
     return response.data;
   }
 
-  Future<Map<String, dynamic>> getMeals({required String endpoint}) async {
+  Future<Map<String, dynamic>> getMeals({required String endpoint , }) async {
     var response = await _dio.get('$_baseUrlMeals$endpoint');
     return response.data;
   }
+
+   Future<Map<String, dynamic>> getCategories({required String endpoint , }) async {
+    var response = await _dio.get('$_baseUrlcategory$endpoint');
+    return response.data;
+  }
+
 
 }

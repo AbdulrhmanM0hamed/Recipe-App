@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
 import 'package:recipe_app/features/categories/data/model/number_of_meals/meal.dart';
 import 'package:recipe_app/features/categories/data/repo/number_of_recipe.dart/number_of_recipe_repo.dart';
 
@@ -19,16 +18,14 @@ Future<void> fetchNumberOFRecipe(String categoryName) async {
       (failure) {
         emit(NumberOfRecipeFailureState(errMessage: failure.errMessage));
       },
-      (number_of_recipe) {
-        // تأكد من أن الـ Cubit لم يتم إغلاقه قبل إصدار الحالة
+      (numberORrecipe) {
         if (!isClosed) {
-          emit(NumberOfRecipeSuccessState(number_of_recipe: number_of_recipe));
+          emit(NumberOfRecipeSuccessState(number_of_recipe: numberORrecipe));
         }
       },
     );
   } catch (e) {
-    // التعامل مع الأخطاء بشكل عام
-    emit(NumberOfRecipeFailureState(errMessage: "Unexpected Error"));
+    emit(const NumberOfRecipeFailureState(errMessage: "Unexpected Error"));
   }
 }
 }

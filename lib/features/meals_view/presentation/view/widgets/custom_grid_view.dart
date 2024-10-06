@@ -1,14 +1,10 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:recipe_app/core/util/api_service.dart';
-import 'package:recipe_app/core/util/resources/assets_manger.dart';
 import 'package:recipe_app/core/util/resources/color_manger.dart';
 import 'package:recipe_app/features/categories/data/model/category.dart';
 import 'package:recipe_app/features/details/presentation/view/detials_view.dart';
-import 'package:recipe_app/features/meals_view/data/repo/meals_repo_impl.dart';
+
 import 'package:recipe_app/features/meals_view/presentation/view_model/cubit/meals_cubit.dart';
 
 class CustomGridView extends StatelessWidget {
