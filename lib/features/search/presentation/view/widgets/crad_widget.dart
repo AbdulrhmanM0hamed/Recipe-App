@@ -16,7 +16,8 @@ class CardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: ColorManger.green.withOpacity(.6),
+      elevation: 0,
+      color: ColorManger.green.withOpacity(.35),
       margin: const EdgeInsets.symmetric(vertical: 8),
       child: ListTile(
         contentPadding: const EdgeInsets.all(10),
