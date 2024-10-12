@@ -4,7 +4,6 @@ import 'package:recipe_app/features/home/data/model_data/random_recipe_model/mea
 
 abstract class MealsRepo {
   Future<Either<Failuer, List<Meal>>> fetchMeals( String search );
-    Future<Either<Failuer, List<Meal>>> fetchCategories( String categoryName );
 
   
 }

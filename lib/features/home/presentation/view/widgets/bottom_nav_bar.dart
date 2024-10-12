@@ -21,7 +21,6 @@ class _MyAppState extends State<CustomBottomNavBar> {
     HomeView(),
     CategoriesView(),
     SearchView(),
-    Profile(),
   ];
 
   @override
@@ -40,9 +39,7 @@ class _MyAppState extends State<CustomBottomNavBar> {
               color: _page == 1 ? ColorManger.green : ColorManger.grey1),
           Icon(FontAwesomeIcons.magnifyingGlass,
               color: _page == 2 ? ColorManger.green : ColorManger.grey1),
-          Icon(Icons.person,
-              size: 30,
-              color: _page == 3 ? ColorManger.green : ColorManger.grey1),
+         
         ],
         onTap: (index) {
           setState(() {

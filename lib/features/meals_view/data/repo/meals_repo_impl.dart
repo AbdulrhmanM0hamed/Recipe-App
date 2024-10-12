@@ -31,24 +31,7 @@ class MealsRepoImpl implements MealsRepo {
     }
   }
   
-  @override
-  Future<Either<Failuer, List<Meal>>> fetchCategories(String categoryNames) async {
-   try {
-      final data = await apiService.getMeals(endpoint: categoryNames);
-      if (data['meals'] != null) {
-        List<Meal> meals =
-            (data['meals'] as List).map((item) => Meal.fromJson(item)).toList();
+ 
 
-        return Right(meals);
-      } else {
-        return Left(ServerFailure(errMessage: "No meals found"));
-      }
-    } catch (e) {
-      if (e is DioException) {
-        return Left(ServerFailure.fromDioError(e));
-      }
-      return Left(ServerFailure(errMessage: "Unexpected Error"));
-    }
-  }
 }
 

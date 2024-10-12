@@ -34,8 +34,7 @@ class CategoriesViewBody extends StatelessWidget {
                   
                 child: CategoryCard(
                     categoryName: categoryName,
-                    categoryThumb:
-                        state.categories[actualIndex].strCategoryThumb,
+                    categoryThumb: state.categories[actualIndex].strCategoryThumb,
                     category: category),
               );
             },

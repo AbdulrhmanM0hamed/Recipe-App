@@ -14,7 +14,7 @@ class CustomAppBar extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Hello , Abdo",
+          "Hello ",
           style: getSemiBoldStyle(
               fontFamily: FontConstant.montserrat,
               color: ColorManger.lightGrey,

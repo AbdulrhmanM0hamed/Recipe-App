@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:recipe_app/features/categories/data/model/category.dart';
 
 class ApiService {
   final _baseUrl = "https://www.themealdb.com/api/json/v1/1/";
@@ -16,6 +15,7 @@ class ApiService {
 
   final Dio _dio;
   ApiService(this._dio, );
+
   Future<Map<String, dynamic>> get({required String endpoint}) async {
     var response = await _dio.get('$_baseUrl$endpoint');
     return response.data;

@@ -60,7 +60,7 @@ class RecommendationRecipe extends StatelessWidget {
                           ),
                           Center(
                             child: Text(
-                              state.meals[index].strMeal ?? "Not found",
+                              state.meals[index].strMeal,
                               style: getBoldStyle(
                                 color: ColorManger.white,
                                 fontFamily: FontConstant.montserrat,
