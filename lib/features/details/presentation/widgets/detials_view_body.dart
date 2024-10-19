@@ -6,7 +6,7 @@ import 'package:recipe_app/features/details/presentation/widgets/info_about_reci
 import 'package:recipe_app/features/details/presentation/widgets/outline_details_view.dart';
 import 'package:recipe_app/features/details/presentation/widgets/recipe_name_with_rate.dart';
 import 'package:recipe_app/features/details/presentation/widgets/subtile_details_view.dart';
-import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
+import 'package:recipe_app/features/home/data/random_recipe_model/meal.dart';
 
 class DetailsViewBody extends StatelessWidget {
   final Meal meal;

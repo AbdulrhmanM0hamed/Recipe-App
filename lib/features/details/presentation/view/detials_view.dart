@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/features/details/presentation/widgets/detials_view_body.dart';
 import 'package:recipe_app/features/details/presentation/widgets/watch_video.dart';
-import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
+import 'package:recipe_app/features/home/data/random_recipe_model/meal.dart';
 
 class DetialsView extends StatelessWidget {
   const DetialsView({super.key, required this.meal});

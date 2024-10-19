@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
+import 'package:recipe_app/features/home/data/random_recipe_model/meal.dart';
 
 
 class MealsOFcategories extends Equatable {

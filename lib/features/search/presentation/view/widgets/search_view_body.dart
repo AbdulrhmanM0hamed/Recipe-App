@@ -4,7 +4,7 @@ import 'package:recipe_app/core/util/resources/color_manger.dart';
 import 'package:recipe_app/core/util/resources/font_manger.dart';
 import 'package:recipe_app/core/util/resources/styles_manger.dart';
 import 'package:recipe_app/core/util/resources/values_manger.dart';
-import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
+import 'package:recipe_app/features/home/data/random_recipe_model/meal.dart';
 import 'package:recipe_app/features/meals_view/presentation/view_model/cubit/meals_cubit.dart';
 import 'package:recipe_app/features/search/presentation/view/widgets/crad_widget.dart';
 import 'package:recipe_app/features/search/presentation/view/widgets/text_field_serch_recipe.dart';

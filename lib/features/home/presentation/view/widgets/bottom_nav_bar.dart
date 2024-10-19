@@ -4,7 +4,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:recipe_app/core/util/resources/color_manger.dart';
 import 'package:recipe_app/features/categories/presentation/view/categories_view.dart';
 import 'package:recipe_app/features/home/presentation/view/home_view.dart';
-import 'package:recipe_app/features/profile/presentation/view/profile.dart';
 import 'package:recipe_app/features/search/presentation/view/search_view.dart';
 
 class CustomBottomNavBar extends StatefulWidget {

@@ -6,7 +6,7 @@ import 'package:recipe_app/features/categories/data/repo/categories_repo_impl.da
 import 'package:recipe_app/features/categories/data/repo/number_of_recipe.dart/number_of_recipe_repo_impl.dart';
 import 'package:recipe_app/features/categories/presentation/view/view_model/number_of_recipe_cubit/cubit/number_of_recipe_cubit.dart';
 import 'package:recipe_app/features/categories/presentation/view_model/cubit/categories_cubit.dart';
-import 'package:recipe_app/features/home/data/model_data/random_recipe_model/repo/home_repo_impl.dart';
+import 'package:recipe_app/features/home/data/random_recipe_model/repo/home_repo_impl.dart';
 import 'package:recipe_app/features/home/presentation/view_model/cubit/random_recipe_cubit.dart';
 import 'package:recipe_app/features/meals_view/data/repo/meals_repo_impl.dart';
 import 'package:recipe_app/features/meals_view/presentation/view_model/cubit/meals_cubit.dart';

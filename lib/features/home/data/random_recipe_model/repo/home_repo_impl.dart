@@ -2,8 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:dartz/dartz.dart';
 import 'package:recipe_app/core/errors/failuer.dart';
 import 'package:recipe_app/core/util/api_service.dart';
-import 'package:recipe_app/features/home/data/model_data/random_recipe_model/meal.dart';
-import 'package:recipe_app/features/home/data/model_data/random_recipe_model/repo/home_repo.dart';
+import 'package:recipe_app/features/home/data/random_recipe_model/meal.dart';
+import 'package:recipe_app/features/home/data/random_recipe_model/repo/home_repo.dart';
 
 class HomeRepoImpl implements HomeRepo {
   final ApiService apiService;

@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 
 class ApiService {
+  
   final _baseUrl = "https://www.themealdb.com/api/json/v1/1/";
   final _baseUrlNumberOfMeals =
       "https://www.themealdb.com/api/json/v1/1/filter.php?c=";
